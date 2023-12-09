@@ -24,7 +24,7 @@ public class Person {
         return name;
     }
 
-    public String getPhone() {
+    public String getPhoneNumber() {
         return phone;
     }
 
@@ -35,6 +35,7 @@ public class Person {
     public boolean isHidden() {
         return isHidden;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -57,6 +58,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name: " + name + ", Phone number: " + phone;
+        return "Name: " + name + " - Phone number: " + phone;
     }
 }
