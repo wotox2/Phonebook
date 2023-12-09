@@ -24,7 +24,7 @@ public class Person {
         return name;
     }
 
-    public String getPhoneNumber() {
+    public String getPhone() {
         return phone;
     }
 

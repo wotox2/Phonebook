@@ -17,11 +17,26 @@ public class Phonebook {
     }
 
     /**
+     * A Method to find a specific user's phone number by entering him/her name
+     * @param name is the name of our contact
+     * @return  is the phone number or an error (happens when we didn't find contact)
+     */
+    public String getPhoneNumber(String name){
+        for (Person contact : contacts) {
+            if(contact == null)
+                return "Contact Not Found";
+            if(Objects.equals(contact.getName(), name))
+                return contact.getPhone();
+        }
+        return "Contact Not Found";
+    }
+
+    /**
      * @param name is The name of the contact who we are looking for
      * if we found the contact who we were looking for, we show the information
      * @return 1 if we found contact and 0 if we couldn't find it
     */
-    public int readContact(String name){
+    public int getContact(String name){
         for (Person contact : contacts) {
             if (contact == null)
                 return 0;
