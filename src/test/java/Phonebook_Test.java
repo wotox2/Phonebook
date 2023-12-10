@@ -6,6 +6,6 @@
  * Hint: Your test coverage should be 100%
  * Attention:  We would check your commits and it will affect your score
  */
-public class PhoneBook_Test {
+public class Phonebook_Test {
 
 }
