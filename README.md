@@ -38,3 +38,5 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 ```
 step 6 => write your unit tests and after completing each tests of a method, commit changes and push to your repo
+
+Find bugs and make this project better
