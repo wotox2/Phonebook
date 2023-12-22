@@ -6,16 +6,15 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For  Updating Contact Name
+    // Test For  Updating Contact Name not found
     @Test
-    public void testUpdateContactName() {
+    public void testUpdateContactNameNotFound() {
         Phonebook phonebook = new Phonebook();
-        Person person = new Person("Eve", "09123456789");
+        Person person = new Person("Frank", "09123456789");
         phonebook.addContact(person);
 
-        int result = phonebook.updateContactName("Eve", "Eva");
+        int result = phonebook.updateContactName("George", "Gina");
 
-        assertEquals(1, result);
-        assertEquals("Eva", person.getName());
+        assertEquals(0, result);
     }
 }
