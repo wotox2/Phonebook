@@ -6,14 +6,15 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For Adding Contact 
+    // Test For Getting  Contact
     @Test
-    public void testAddContact() {
+    public void testGetPhoneNumber() {
         Phonebook phonebook = new Phonebook();
-        Person person = new Person("John", "09123456789");
-
+        Person person = new Person("Alice", "09123456789");
         phonebook.addContact(person);
 
-        assertEquals(1, phonebook.getAllContacts().size());
+        String result = phonebook.getPhoneNumber("Alice");
+
+        assertEquals("09123456789", result);
     }
 }
