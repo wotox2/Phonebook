@@ -6,15 +6,17 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For  Get All Contact
+    // Test For  Get All Contact Hidden
     @Test
-    public void testGetAllContacts() {
+    public void testSetAllContactsHidden() {
         Phonebook phonebook = new Phonebook();
-        phonebook.addContact(new Person("Mia", "09123456789"));
-        phonebook.addContact(new Person("Nathan", "09876543210"));
+        phonebook.addContact(new Person("Olivia", "09123456789"));
+        phonebook.addContact(new Person("Peter", "09876543210"));
 
-        ArrayList<Person> result = phonebook.getAllContacts();
+        phonebook.setAllContactsHidden();
 
-        assertEquals(2, result.size());
+        for (Person contact : phonebook.getAllContacts()) {
+            assertEquals(true, contact.isHidden());
+        }
     }
 }
