@@ -6,16 +6,16 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For  Updating Contact Phone Number
+    // Test For  Delete Contact
     @Test
-    public void testUpdateContactPhoneNumber() {
+    public void testDeleteContact() {
         Phonebook phonebook = new Phonebook();
-        Person person = new Person("Hank", "09123456789");
+        Person person = new Person("Katie", "09123456789");
         phonebook.addContact(person);
 
-        int result = phonebook.updateContactPhoneNumber("Hank", "09876543210");
+        int result = phonebook.deleteContact("Katie");
 
         assertEquals(1, result);
-        assertEquals("09876543210", person.getPhone());
+        assertEquals(0, phonebook.getAllContacts().size());
     }
 }
