@@ -8,15 +8,15 @@ public class Phonebook_Test {
 
     // Test For  Get All Contact Hidden
     @Test
-    public void testSetAllContactsHidden() {
+    public void testSetAllContactsUnHidden() {
         Phonebook phonebook = new Phonebook();
-        phonebook.addContact(new Person("Olivia", "09123456789"));
-        phonebook.addContact(new Person("Peter", "09876543210"));
+        phonebook.addContact(new Person("Quinn", "09123456789"));
+        phonebook.addContact(new Person("Rachel", "09876543210"));
 
-        phonebook.setAllContactsHidden();
+        phonebook.setAllContactsUnHidden();
 
         for (Person contact : phonebook.getAllContacts()) {
-            assertEquals(true, contact.isHidden());
+            assertEquals(false, contact.isHidden());
         }
     }
 }
