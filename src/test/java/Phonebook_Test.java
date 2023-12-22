@@ -6,16 +6,15 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For  Delete Contact Not Found
+    // Test For  Get All Contact
     @Test
-    public void testDeleteContactNotFound() {
+    public void testGetAllContacts() {
         Phonebook phonebook = new Phonebook();
-        Person person = new Person("Leo", "09123456789");
-        phonebook.addContact(person);
+        phonebook.addContact(new Person("Mia", "09123456789"));
+        phonebook.addContact(new Person("Nathan", "09876543210"));
 
-        int result = phonebook.deleteContact("Lucas");
+        ArrayList<Person> result = phonebook.getAllContacts();
 
-        assertEquals(0, result);
-        assertEquals(1, phonebook.getAllContacts().size());
+        assertEquals(2, result.size());
     }
 }
