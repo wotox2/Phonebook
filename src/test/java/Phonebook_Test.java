@@ -6,15 +6,15 @@ import java.util.ArrayList;
 public class Phonebook_Test {
 
 
-    // Test For Getting  Contact
+    // Test For Getting  Contact Not Found
     @Test
-    public void testGetContact() {
+    public void testGetContactNotFound() {
         Phonebook phonebook = new Phonebook();
-        Person person = new Person("Alice", "09123456789");
+        Person person = new Person("Bob", "09123456789");
         phonebook.addContact(person);
 
-        int result = phonebook.getContact("Alice");
+        int result = phonebook.getContact("Charlie");
 
-        assertEquals(1, result);
+        assertEquals(0, result);
     }
 }
