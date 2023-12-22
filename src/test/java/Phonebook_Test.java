@@ -8,13 +8,13 @@ public class Phonebook_Test {
 
     // Test For Getting  Contact
     @Test
-    public void testGetPhoneNumber() {
+    public void testGetContact() {
         Phonebook phonebook = new Phonebook();
         Person person = new Person("Alice", "09123456789");
         phonebook.addContact(person);
 
-        String result = phonebook.getPhoneNumber("Alice");
+        int result = phonebook.getContact("Alice");
 
-        assertEquals("09123456789", result);
+        assertEquals(1, result);
     }
 }
